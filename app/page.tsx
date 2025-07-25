@@ -8,11 +8,7 @@ export const metadata: Metadata = {
   description: "Message to Sonile",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout() {
   return (
     <html lang="en">
       <body className={`${eudoxusSansGX.className} @container/main`}>
