@@ -3,8 +3,8 @@ import "./globals.css";
 import { eudoxusSansGX } from "../app/font";
 
 export const metadata: Metadata = {
-  title: "Content Funnel",
-  description: "Content Funnel",
+  title: "Message to Sonile",
+  description: "Message to Sonile",
 };
 
 export default function RootLayout({
