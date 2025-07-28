@@ -5,6 +5,10 @@ import { eudoxusSansGX } from "../app/font";
 export const metadata: Metadata = {
   title: "Message to Sonile",
   description: "Message to Sonile",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({

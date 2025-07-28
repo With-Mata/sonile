@@ -4,6 +4,10 @@ import { Container } from "../Container";
 export const metadata: Metadata = {
   title: "Message to Sonile",
   description: "Message to Sonile",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const MainPage = () => {
