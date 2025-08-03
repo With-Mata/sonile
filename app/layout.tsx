@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { eudoxusSansGX } from "../app/font";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { Analytics } from "@vercel/analytics/next";
 import appConfig from "@/config/app-config";
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${eudoxusSansGX.className} @container/main`}>
         <NuqsAdapter>{children}</NuqsAdapter>
+        <Analytics />
       </body>
     </html>
   );
