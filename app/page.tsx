@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import MessagesViewer from "./_comps/MessagesViewer";
 import appConfig from "@/config/app-config";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: appConfig.name,
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
 };
 
 const MainPage = () => {
-  return <MessagesViewer />;
+  return (
+    <Suspense>
+      <MessagesViewer />
+    </Suspense>
+  );
 };
 
 export default MainPage;
