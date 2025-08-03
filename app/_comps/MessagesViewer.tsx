@@ -28,8 +28,8 @@ const MessagesViewer = () => {
   }, [episode]);
 
   return (
-    <Container className="max-w-2xl min-h-[110dvh] space-y-8 py-8 md:py-10 text-lg px-8 md:px-4">
-      <div className="flex flex-row gap-4">
+    <div className="flex flex-col py-8 md:py-10">
+      <div className="flex flex-row gap-4 overflow-x-auto scrollbar-hide px-8 md:px-4 max-w-2xl mx-auto w-full">
         {sortedMessages.map((message, index) => (
           <div
             role="button"
@@ -48,7 +48,7 @@ const MessagesViewer = () => {
             }}
             aria-label={message.title}
           >
-            <p className="text-xs text-gray-500 flex flex-row gap-1.5">
+            <p className="text-xs whitespace-nowrap text-gray-500 flex flex-row gap-1.5">
               <span className=" text-black">{message.title}</span>
               {message.createdAt && (
                 <>
@@ -66,8 +66,10 @@ const MessagesViewer = () => {
           </div>
         ))}
       </div>
-      {currentMessage?.content}
-    </Container>
+      <Container className="max-w-2xl min-h-[110dvh] space-y-8 py-8 md:py-10 text-lg px-8 md:px-4">
+        {currentMessage?.content}
+      </Container>
+    </div>
   );
 };
 
