@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       url: appConfig.imageUrl,
       type: "image/png",
       width: 1200,
-      height: 630,
+      height: 1024,
       alt: appConfig.description,
     },
   },
