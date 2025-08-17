@@ -115,8 +115,8 @@ const countDownItems: CountDownItem[] = [
           the truth is… I think you’re the real superhero here. And your first
           power? Well, I might as well just show you.
         </p>
-        <div className="rounded-xl flex items-center py-5 mx-auto w-max px-4 justify-center flex-col gap-7">
-          <div className="relative h-full w-full max-w-xs md:max-w-sm">
+        <div className="rounded-xl flex items-center py-5 mx-auto w-max justify-center flex-col gap-7">
+          <div className="relative h-full w-full mx-auto max-w-xs md:max-w-sm">
             <Image
               src="/images/sonile-sleeping.jpg"
               alt="sonile sleeping"
