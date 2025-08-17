@@ -12,6 +12,7 @@ interface CountDownItem {
   key: string;
   releaseTime: Date;
   content: React.ReactNode;
+  placeholder?: React.ReactNode;
 }
 
 const toRelease = (isoLocal: string) =>
@@ -47,10 +48,6 @@ const countDownItems: CountDownItem[] = [
                 })}
                 type="audio/ogg"
               />
-              {/* <source
-                src={`https://res.cloudinary.com/diqqjrx4n/video/upload/v1755402560/birthday-recording_hhv571.ogg`}
-                type="audio/ogg"
-              /> */}
               Your browser does not support the audio element.
             </audio>
           </div>
@@ -58,41 +55,67 @@ const countDownItems: CountDownItem[] = [
       </div>
     ),
   },
-  // {
-  //   key: "afternoon-message",
-  //   releaseTime: toRelease("2025-08-17T13:00:00"),
-  //   content: (
-  //     <>
-  //       <p>
-  //         Lorem Ipsum is simply dummy text of the printing and typesetting
-  //         industry.
-  //       </p>
-  //       <div className="relative w-full h-40">
-  //         <Image
-  //           src="/images/birthday-balloons.jpg"
-  //           alt="audio"
-  //           className="rounded-full"
-  //           fill
-  //         />
-  //       </div>
-  //     </>
-  //   ),
-  // },
   {
     key: "evening-message",
-    releaseTime: toRelease("2025-08-17T16:00:00"),
+    releaseTime: toRelease("2025-08-17T20:00:00"),
+    placeholder: (
+      <div className="space-y-2">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+        <div className="relative w-full h-28">
+          <Image
+            src="/images/birthday-ballons.jpg"
+            alt="ballons"
+            className="rounded-lg opacity-35 object-cover"
+            fill
+          />
+        </div>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+        <div className="relative w-full h-28">
+          <Image
+            src="/images/cupcakes.jpg"
+            alt="cupcakes"
+            className="rounded-lg opacity-35 object-cover"
+            fill
+          />
+        </div>
+      </div>
+    ),
     content: (
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        especially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-      </p>
+      <div className="space-y-2">
+        <div className="relative w-full h-80">
+          <Image
+            src="/images/birthday-ballons.jpg"
+            alt="audio"
+            className="rounded-lg object-cover"
+            fill
+          />
+        </div>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining especially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+        <div className="relative w-full h-80">
+          <Image
+            src="/images/cupcakes.jpg"
+            alt="audio"
+            className="rounded-lg object-cover"
+            fill
+          />
+        </div>
+      </div>
     ),
   },
 ];
@@ -128,14 +151,18 @@ const Sweet16Plus10Content = () => {
         .map((item) => {
           return (
             <div className="relative">
-              <p className="text-base font-medium">Upcoming Next...</p>
+              <p className="text-base font-medium">
+                <span className="mr-0.5">Coming Soon...</span> Delay = suspense
+                😏
+                <span className="mx-0.5">☕</span>
+              </p>
               <CountDownCard
                 key={item.key}
                 releaseTime={item.releaseTime}
                 onRelease={handleRelease}
                 className="mt-2"
               >
-                {item.content}
+                {item.placeholder || item.content}
               </CountDownCard>
             </div>
           );
