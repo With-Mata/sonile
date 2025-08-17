@@ -209,6 +209,7 @@ const countDownItems: CountDownItem[] = [
             Happy Birthday 🥳,{" "}
             <span className="text-pink-600">Mrs Unicorn</span>
           </strong>
+          .
           <span className="ml-1.5">I'm really blessed to be your partner!</span>
         </p>
         <div className="relative h-full mx-auto w-full max-w-xs md:max-w-sm">
