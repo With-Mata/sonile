@@ -196,7 +196,7 @@ const countDownItems: CountDownItem[] = [
           At this point, it’s quite clear you’re definitely{" "}
           <span className="font-bold">something out of this world</span>. And
           honestly, if anyone hasn’t noticed yet, they probably just haven’t
-          been paying close enough attention.
+          been paying attention.
           <br />
           <br />
           So yeah… that’s the truth. You’re{" "}
