@@ -170,7 +170,7 @@ const countDownItems: CountDownItem[] = [
           <span className="font-bold">Generosity ❤️</span>. Even after all the
           work and hustle, you show up for the people who matter most, quietly
           lifting them up and making life brighter. This is the power that
-          leaves the biggest mark—the one we all feel, every day.
+          leaves the biggest mark, the one we all feel every day.
         </p>
         <div className="flex flex-col lg:flex-row gap-3 items-center justify-center">
           <div className="relative h-full w-full max-w-xs md:max-w-sm">
@@ -205,7 +205,7 @@ const countDownItems: CountDownItem[] = [
           just how amazing it is to exist in a world where there is you.
         </p>
         <p>
-          <strong>Happy Birthday, Mrs Unicorn</strong>
+          <strong>Happy Birthday 🥳, Mrs Unicorn</strong>
           <span className="ml-1.5">I'm really blessed to be your partner!</span>
         </p>
         <div className="relative h-full mx-auto w-full max-w-xs md:max-w-sm">
