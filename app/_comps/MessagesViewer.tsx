@@ -29,14 +29,14 @@ const MessagesViewer = () => {
 
   return (
     <div className="flex flex-col py-8 md:py-10">
-      <div className="flex flex-row gap-4 overflow-x-auto scrollbar-hide px-8 md:px-4 max-w-2xl mx-auto w-full">
+      <div className="flex flex-row max-h-max gap-4 overflow-x-auto scrollbar-hide px-8 md:px-4 max-w-2xl mx-auto w-full">
         {sortedMessages.map((message, index) => (
           <div
             role="button"
             tabIndex={index}
             key={index}
             className={cn(
-              "flex flex-col cursor-pointer gap-4 bg-gray-100/80 border-2 border-transparent font-medium hover:bg-gray-200/80 rounded-full py-2 px-3.5",
+              "flex flex-col h-max cursor-pointer gap-4 bg-gray-100/80 border-2 border-transparent font-medium hover:bg-gray-200/80 rounded-full py-2 px-3.5",
               currentMessage?.id === message.id &&
                 "bg-gray-200/90 hover:bg-gray-200 border-gray-300"
             )}
@@ -46,10 +46,19 @@ const MessagesViewer = () => {
                 setEpisode(message.id);
               }
             }}
-            aria-label={message.title}
+            aria-label={message.id}
+            ref={(el) => {
+              if (el && currentMessage?.id === message.id) {
+                el.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                  inline: "center",
+                });
+              }
+            }}
           >
-            <p className="text-xs whitespace-nowrap text-gray-500 flex flex-row gap-1.5">
-              <span className=" text-black">{message.title}</span>
+            <div className="text-xs h-max whitespace-nowrap text-gray-500 flex flex-row gap-1.5">
+              <span className="text-black">{message.title}</span>
               {message.createdAt && (
                 <>
                   &bull;
@@ -62,13 +71,11 @@ const MessagesViewer = () => {
                   </span>
                 </>
               )}
-            </p>
+            </div>
           </div>
         ))}
       </div>
-      <Container className="max-w-2xl min-h-[110dvh] space-y-8 py-8 md:py-10 text-lg px-8 md:px-4">
-        {currentMessage?.content}
-      </Container>
+      {currentMessage?.content}
     </div>
   );
 };
