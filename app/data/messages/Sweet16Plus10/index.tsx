@@ -6,6 +6,8 @@ import { fromZonedTime } from "date-fns-tz";
 import Timezone from "timezone-enum";
 import { useState } from "react";
 
+import { getCldVideoUrl } from "next-cloudinary";
+
 interface CountDownItem {
   key: string;
   releaseTime: Date;
@@ -38,7 +40,17 @@ const countDownItems: CountDownItem[] = [
               />
             </div>
             <audio controls className="rounded-full">
-              <source src="your-audio-file.mp3" type="audio/mpeg" />
+              <source
+                src={getCldVideoUrl({
+                  src: "birthday-recording_hhv571",
+                  format: "ogg",
+                })}
+                type="audio/ogg"
+              />
+              {/* <source
+                src={`https://res.cloudinary.com/diqqjrx4n/video/upload/v1755402560/birthday-recording_hhv571.ogg`}
+                type="audio/ogg"
+              /> */}
               Your browser does not support the audio element.
             </audio>
           </div>
@@ -46,12 +58,26 @@ const countDownItems: CountDownItem[] = [
       </div>
     ),
   },
-  {
-    key: "afternoon-message",
-    // releaseTime: toRelease("2025-08-17T13:00:00"),
-    releaseTime: toRelease("2025-08-17T02:41:00"),
-    content: <p>Hello</p>,
-  },
+  // {
+  //   key: "afternoon-message",
+  //   releaseTime: toRelease("2025-08-17T13:00:00"),
+  //   content: (
+  //     <>
+  //       <p>
+  //         Lorem Ipsum is simply dummy text of the printing and typesetting
+  //         industry.
+  //       </p>
+  //       <div className="relative w-full h-40">
+  //         <Image
+  //           src="/images/birthday-balloons.jpg"
+  //           alt="audio"
+  //           className="rounded-full"
+  //           fill
+  //         />
+  //       </div>
+  //     </>
+  //   ),
+  // },
   {
     key: "evening-message",
     releaseTime: toRelease("2025-08-17T16:00:00"),
@@ -78,7 +104,7 @@ const Sweet16Plus10Content = () => {
 
   return (
     <Container
-      className="max-w-2xl min-h-[110dvh] space-y-8 py-8 md:py-10 text-lg px-8 md:px-4"
+      className="max-w-2xl min-h-[110dvh] space-y-6 py-8 md:py-10 text-lg px-8 md:px-4"
       key={releaseTick}
     >
       {countDownItems
@@ -101,13 +127,17 @@ const Sweet16Plus10Content = () => {
         .slice(0, 1)
         .map((item) => {
           return (
-            <CountDownCard
-              key={item.key}
-              releaseTime={item.releaseTime}
-              onRelease={handleRelease}
-            >
-              {item.content}
-            </CountDownCard>
+            <div className="relative">
+              <p className="text-base font-medium">Upcoming Next...</p>
+              <CountDownCard
+                key={item.key}
+                releaseTime={item.releaseTime}
+                onRelease={handleRelease}
+                className="mt-2"
+              >
+                {item.content}
+              </CountDownCard>
+            </div>
           );
         })}
     </Container>
