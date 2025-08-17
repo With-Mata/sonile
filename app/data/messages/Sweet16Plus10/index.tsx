@@ -87,35 +87,150 @@ const countDownItems: CountDownItem[] = [
       </div>
     ),
     content: (
-      <div className="space-y-2">
-        <div className="relative w-full h-80">
-          <Image
-            src="/images/birthday-ballons.jpg"
-            alt="audio"
-            className="rounded-lg object-cover"
-            fill
-          />
+      <Container className="main:px-0 space-y-8 text-lg">
+        <hr className="my-8 border-gray-200" />
+        <p>
+          <strong>
+            <span className="text-pink-600">Continue Here....</span>{" "}
+          </strong>
+        </p>
+        <p className="italic">
+          Pssst… is the coast clear? Did you sneak in here without anyone
+          following you?
+        </p>
+        <p>
+          <span className="italic mr-2">Good.</span>Welcome to Part Two,{" "}
+          <span className="font-semibold">Agent 007</span> 🥷🏽. Don’t worry, no
+          riddles or secret missions here, just you and me, carrying on where we
+          left off.
+        </p>
+        <p>
+          I know I’ve told you plenty of times that you make me feel truly seen
+          for the superhero I am, and today, more than ever, I want to shine
+          that same spotlight back on you.
+        </p>
+        <p>
+          It’s been over a month since you sent me that very first text message,
+          and from that moment on, I’ve been quietly taking notes 👀. Because
+          the truth is… I think you’re the real superhero here. And your first
+          power? Well, I might as well just show you.
+        </p>
+        <div className="rounded-xl flex items-center py-5 mx-auto w-max px-4 justify-center flex-col gap-7">
+          <div className="relative h-full w-full max-w-xs md:max-w-sm">
+            <Image
+              src="/images/sonile-sleeping.jpg"
+              alt="sonile sleeping"
+              className="rounded-2xl object-cover"
+              width={1200}
+              height={630}
+            />
+          </div>
+          <p className="text-center text-base max-w-80">
+            <span className="font-bold">
+              The "I won't fall asleep Superpower"
+            </span>{" "}
+            — capable of dozing mid-mission while still looking adorable 😴
+          </p>
         </div>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining especially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Not many people would consider this a superpower. You’re asleep…
+          where’s the magic here? The truth is, they don’t have the full
+          picture. While some might be resting, you’re actually just charging up
+          for your next mission.
         </p>
-        <div className="relative w-full h-80">
+        <p>
+          Funny enough that actually brings us to your second power:{" "}
+          <span className="font-bold">The Grind 🛠️</span>. Long hours at work
+          and endless side hustles, chasing your big dreams (that AMG 😏)… you
+          do it all with focus, determination, and style. Most heroes might hang
+          up their cape when things get tough… but you? You just keep going!
+        </p>
+        <div className="flex flex-col lg:flex-row gap-3 items-center justify-center">
+          <div className="relative h-full w-full max-w-xs md:max-w-sm">
+            <Image
+              src="/images/sonile-stand.PNG"
+              alt="sonile standing"
+              className="rounded-2xl object-cover"
+              width={1200}
+              height={630}
+            />
+          </div>
+          <div className="relative h-full w-full max-w-xs md:max-w-sm">
+            <Image
+              src="/images/sonile-laugh.PNG"
+              alt="sonile laughing"
+              className="rounded-2xl object-cover"
+              width={1200}
+              height={630}
+            />
+          </div>
+        </div>
+        <p>
+          And now, for your greatest power:{" "}
+          <span className="font-bold">Generosity ❤️</span>. Even after all the
+          work and hustle, you show up for the people who matter most, quietly
+          lifting them up and making life brighter. This is the power that
+          leaves the biggest mark—the one we all feel, every day.
+        </p>
+        <div className="flex flex-col lg:flex-row gap-3 items-center justify-center">
+          <div className="relative h-full w-full max-w-xs md:max-w-sm">
+            <Image
+              src="/images/sonile-hugging.JPG"
+              alt="sonile hugging Prudence"
+              className="rounded-2xl object-cover"
+              width={1200}
+              height={630}
+            />
+          </div>
+          <div className="relative h-full w-full max-w-xs md:max-w-sm">
+            <Image
+              src="/images/sonile-dancing.jpg"
+              alt="sonile dancing"
+              className="rounded-2xl object-cover"
+              width={1200}
+              height={630}
+            />
+          </div>
+        </div>
+        <p>
+          At this point, it’s quite clear—you’re definitely{" "}
+          <span className="font-bold">something out of this world</span>. And
+          honestly, if anyone hasn’t noticed yet, they probably just haven’t
+          been paying close enough attention.
+          <br />
+          <br />
+          So yeah… that’s the truth. You’re{" "}
+          <span className="font-bold underline-offset-2">incredible</span>, and
+          I hope today, right here, right now, you can feel even a fraction of
+          just how amazing it is to exist in a world where there is you.
+        </p>
+        <p>
+          <strong>Happy Birthday, Mrs Unicorn</strong>
+          <span className="ml-1.5">I'm really blessed to be your partner!</span>
+        </p>
+        <div className="relative h-full mx-auto w-full max-w-xs md:max-w-sm">
           <Image
-            src="/images/cupcakes.jpg"
-            alt="audio"
-            className="rounded-lg object-cover"
-            fill
+            src="/images/sonile-smiling.jpeg"
+            alt="sonile smiling"
+            className="rounded-2xl object-cover"
+            width={1200}
+            height={630}
           />
         </div>
-      </div>
+        <div className="relative h-full mx-auto w-full max-w-xs md:max-w-sm">
+          <Image
+            src="/images/birthday-cake.jpeg"
+            alt="birthday cake"
+            className="rounded-2xl object-cover"
+            width={1200}
+            height={630}
+          />
+        </div>
+        <p className="text-center">
+          Love,
+          <strong className="ml-1.5">Papa Bun Bun</strong>
+        </p>
+      </Container>
     ),
   },
 ];
