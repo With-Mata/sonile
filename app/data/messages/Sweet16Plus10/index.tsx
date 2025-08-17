@@ -205,7 +205,10 @@ const countDownItems: CountDownItem[] = [
           just how amazing it is to exist in a world where there is you.
         </p>
         <p>
-          <strong>Happy Birthday 🥳, Mrs Unicorn</strong>
+          <strong>
+            Happy Birthday 🥳,{" "}
+            <span className="text-pink-600">Mrs Unicorn</span>
+          </strong>
           <span className="ml-1.5">I'm really blessed to be your partner!</span>
         </p>
         <div className="relative h-full mx-auto w-full max-w-xs md:max-w-sm">
@@ -226,9 +229,9 @@ const countDownItems: CountDownItem[] = [
             height={630}
           />
         </div>
-        <p className="text-center">
+        <p className="text-center font-bold">
           Love,
-          <strong className="ml-1.5">Papa Bun Bun</strong>
+          <strong className="ml-1.5 text-teal-600">Papa Bun Bun</strong>
         </p>
       </Container>
     ),
