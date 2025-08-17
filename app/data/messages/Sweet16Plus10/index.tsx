@@ -193,7 +193,7 @@ const countDownItems: CountDownItem[] = [
           </div>
         </div>
         <p>
-          At this point, it’s quite clear—you’re definitely{" "}
+          At this point, it’s quite clear you’re definitely{" "}
           <span className="font-bold">something out of this world</span>. And
           honestly, if anyone hasn’t noticed yet, they probably just haven’t
           been paying close enough attention.
