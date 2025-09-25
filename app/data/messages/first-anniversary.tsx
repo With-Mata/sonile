@@ -5,7 +5,7 @@ import Image from "next/image";
 export const firstAnniversary: Message = {
   id: "first-anniversary",
   title: "First Anniversary 🎉",
-  createdAt: new Date("2025-08-25"),
+  createdAt: new Date("2025-08-26"),
   content: (
     <Container className="max-w-2xl min-h-[110dvh] space-y-8 py-8 md:py-10 text-lg px-8 md:px-4">
       <p>
